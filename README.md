@@ -1,4 +1,4 @@
-https://jenkins-logging-poc.52.172.12.252.nip.io/management/logs
+http://stock-logging-poc.52.172.12.252.nip.io/stock/management/log
 # stock
 
 This application was generated using JHipster 5.8.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.8.2](https://www.jhipster.tech/documentation-archive/v5.8.2).
