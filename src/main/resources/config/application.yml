@@ -79,9 +79,7 @@ management:
         web:
             server:
                 auto-time-requests: true
-logging:
-  pattern:
-    console: %d %5p %logger: %replace(%m%wEx){'\\n','\r'}%nopex%n
+
 spring:
     application:
         name: stock
