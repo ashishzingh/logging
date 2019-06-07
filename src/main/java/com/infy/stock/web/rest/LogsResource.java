@@ -54,11 +54,11 @@ public class LogsResource {
 		}
 		return "Microsevice Up and Running";
     }
-   /* private void divide() {
+    private void divide() {
 		// TODO Auto-generated method stub
 		System.out.println("logging is working");
 		int i = 10 / 0;
 		
-	}*/
+	}
     
 }
