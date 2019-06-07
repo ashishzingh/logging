@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/management")
 public class LogsResource {
+    LogsResource obj = new LogsResource();
    private final Logger log = LoggerFactory.getLogger(LogsResource.class);
     @GetMapping("/logs")
     public List<LoggerVM> getList() {
@@ -49,13 +50,21 @@ public class LogsResource {
 			
 		}*/
         try {
-            int i=10/0;
+            obj.divide();
 		} catch (ArithmeticException ex) {
 			log.info(exception,ex);
 			
 		}
 		return "Microsevice Up and Running";
     }
+    public void divide() {
+		// TODO Auto-generated method stub
+		System.out.println("logging is working");
+		int i = 10 / 0;
+		
+	}
+   
     
     
 }
+ 
