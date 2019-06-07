@@ -52,7 +52,7 @@ public class LogsResource {
         try {
             obj.divide();
 		} catch (ArithmeticException ex) {
-			log.info(exception,ex);
+			log.info("exception",ex);
 			
 		}
 		return "Microsevice Up and Running";
