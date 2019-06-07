@@ -33,4 +33,19 @@ public class LogsResource {
         LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
         context.getLogger(jsonLogger.getName()).setLevel(Level.valueOf(jsonLogger.getLevel()));
     }
+    @GetMapping("/log")
+    public String getl() {
+        /*LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
+        return context.getLoggerList()
+            .stream()
+            .map(LoggerVM::new)
+            .collect(Collectors.toList());
+        try {
+			obj.divide();
+		} catch (ArithmeticException ex) {
+			ex.printStackTrace();
+			
+		}*/
+		return "Microsevice Up and Running";
+    }
 }
