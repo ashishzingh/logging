@@ -50,7 +50,7 @@ public class LogsResource {
 			
 		}*/
         try {
-            obj.divide();
+            int i=10/0;
 		} catch (ArithmeticException ex) {
 			log.info("exception",ex);
 			
