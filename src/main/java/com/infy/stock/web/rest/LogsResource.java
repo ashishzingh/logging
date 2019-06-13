@@ -52,7 +52,7 @@ public class LogsResource {
         try {
             int i=10/0;
 		} catch (ArithmeticException ex) {
-			log.info("exception",ex);
+			log.info("Applog:",ex);
 			
 		}
 		return "Microsevice Up and Running";
