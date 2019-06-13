@@ -38,9 +38,49 @@
     <logger name="LiquibaseSchemaResolver" level="INFO"/>
     <logger name="sun.net.www" level="INFO"/>
     <logger name="sun.rmi.transport" level="WARN"/>
+    
+    <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+          <level>WARN</level>
+        </filter>
+        
+        
+    </appender>
 
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+          <level>DEBUG</level>
+          <onMatch>ACCEPT</onMatch>
+        </filter>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+          <level>INFO</level>
+          <onMatch>ACCEPT</onMatch>
+        </filter>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+          <level>TRACE</level>
+          <onMatch>ACCEPT</onMatch>
+        </filter>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+          <level>WARN</level>
+          <onMatch>DENY</onMatch>
+        </filter>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+          <level>ERROR</level>
+          <onMatch>DENY</onMatch>
+        </filter>
+        
+        
+    </appender>
+    
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STDERR" />
+    </root>
+    <!--
     <root level="WARN">
         <appender-ref ref="CONSOLE"/>
-    </root>
+    </root>-->
 
 </configuration>
