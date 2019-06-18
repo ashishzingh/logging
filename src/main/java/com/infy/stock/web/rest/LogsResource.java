@@ -50,11 +50,13 @@ public class LogsResource {
 			
 		}*/
         try {
+            log.info("Started Processing REST Service: /stock/management/log");
             int i=10/0;
 		} catch (ArithmeticException ex) {
-			log.info("Applog:",ex);
+			log.error("Some Exception occured :",ex);
 			
 		}
+        log.info("Completed Processing REST Service: /stock/management/log");
 		return "Microsevice Up and Running";
     }
     /*public void divide() {
